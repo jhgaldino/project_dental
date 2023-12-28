@@ -1,26 +1,26 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const departmentSchema = new Schema(
-    {
-        name: {
-            type: String,
-            required: true,
-        },
-        description: {
-            type: String,
-            required: false,
-        },
-        employees: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Employees',
-            },
-        ],
+  {
+    name: {
+      type: String,
+      required: true,
     },
-    {
-        timestamps: true,
-    }
+    description: {
+      type: String,
+      required: false,
+    },
+    employees: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Employees",
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
 );
-
-module.exports = mongoose.model('Department', departmentSchema);
+const Department = mongoose.model("Department", departmentSchema);
+module.exports = Department;
