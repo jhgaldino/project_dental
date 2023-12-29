@@ -71,7 +71,18 @@ router.post(
       const department = new Department({ name, description });
       await department.save();
 
-      res.status(201).json({ message: "Department created" });
+      const responseDepartment = {
+        _id: department._id,
+        name: department.name,
+        description: department.description,
+      };
+
+      res
+        .status(201)
+        .json({
+          message: "Department created",
+          department: responseDepartment,
+        });
     } catch (error) {
       console.error(error);
       res
