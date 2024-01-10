@@ -13,3 +13,12 @@
     }
   </div>
 }
+
+@for(employee of allEmployees(); track employee._id) {
+  <div class="card">
+    <span class="name">
+      <strong>Name:</strong> {{employee.name}}
+      <strong>Surname:</strong> {{employee.surname}}
+    </span>
+  </div>
+}
