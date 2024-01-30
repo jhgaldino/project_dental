@@ -1,4 +1,6 @@
 A project Dentist Clinic for Coursea.
 
-Using Express.js, MongoDB and Docker for Backend.
+Using Express.js and MongoDB for Backend.
 Using Angular for Frontend.
+
+The system is Dockerized.
